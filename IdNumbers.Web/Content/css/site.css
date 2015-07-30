@@ -1,0 +1,306 @@
+﻿body {
+    margin: 0 0 30px 0;
+    font-size: 1.5em;
+    /*background-color: #1f78bf;*/
+}
+
+.affix {
+    top: 0;
+}
+
+.bg-sky {
+    /*padding: 0;*/
+    /*background: -webkit-linear-gradient(#1f78bf, #e4fafd);*/ /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(#1f78bf, #e4fafd);*/ /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(#1f78bf, #e4fafd);*/ /*For Firefox 3.6 to 15 */
+    /*background: linear-gradient(#1f78bf, #e4fafd);*/ /* Standard syntax */
+}
+
+.header-row {
+    background-color: #fff;
+    box-shadow: 0px 2px 4px #444;
+}
+
+/*************NAVBAR************/
+.navbar {
+    margin-bottom: 0;
+    box-shadow: 0px -1px 1px #444;
+    border-bottom: solid 1px #000;
+}
+
+.navbar-default {
+    background-color: #d8d8d8;
+    padding-bottom: 7px;
+}
+
+.navbar-collapse {
+}
+
+.navbar-btn {
+    margin: 5px;
+    color: #eee;
+    text-shadow: 1px 1px #444;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav > li > a.format-btn {
+    background-color: #d7bb36;
+    box-shadow: 2px 2px 0 #444;
+}
+
+    .nav > li > a.format-btn:hover,
+    .nav > li > a.format-btn:focus {
+        color: #eee;
+        text-shadow: 1px 1px #444;
+        background-color: #c9a432;
+    }
+
+.nav > li > a.formula-btn {
+    background-color: #fea200;
+    box-shadow: 2px 2px 0 #444;
+}
+
+    .nav > li > a.formula-btn:hover,
+    .nav > li > a.formula-btn:focus {
+        color: #eee;
+        text-shadow: 1px 1px #444;
+        background-color: #ff6805;
+    }
+
+.nav > li > a.generate-btn {
+    background-color: #bf6505;
+    box-shadow: 2px 2px 0 #444;
+}
+
+    .nav > li > a.generate-btn:hover,
+    .nav > li > a.generate-btn:focus {
+        color: #eee;
+        text-shadow: 1px 1px #444;
+        background-color: #8b4a0a;
+    }
+
+.nav > li > a.validate-btn {
+    background-color: #5cb85c;
+    box-shadow: 2px 2px 0 #444;
+}
+
+    .nav > li > a.validate-btn:hover,
+    .nav > li > a.validate-btn:focus {
+        color: #eee;
+        text-shadow: 1px 1px #444;
+        background-color: #047201;
+    }
+/**********END NAVBAR************/
+
+.content-container {
+    /*margin-top: 5px;*/
+    background-color: #1f78bf;
+    padding-bottom: 50px;
+}
+
+.heading-1 {
+    width: 90%;
+    color: #111;
+    font-size: 140%;
+    font-weight: bold;
+    text-shadow: 1px 1px #777;
+    padding: 1% 1.5% 0 1.5%;
+}
+
+.heading-2 {
+    color: #eee;
+    font-size: 120%;
+    font-weight: bold;
+    text-shadow: 1px 1px #222;
+    padding: 1%;
+}
+
+.heading-3 {
+    color: #eee;
+    font-size: 100%;
+    font-weight: bold;
+    text-shadow: 1px 1px #222;
+    padding: 20px;
+}
+
+.validation-rules {
+    color: #eee;
+    font-size: 112%;
+    text-shadow: 1px 1px #444;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.txt-id-number {
+    height: 3em;
+    font-family: Verdana;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-shadow: 2px 2px #777;
+    border: none;
+    background-color: transparent;
+    visibility: hidden;
+}
+
+.input-group-addon {
+    margin: 0;
+    padding: 0;
+}
+
+.generate-id {
+    height: 2.77em;
+    margin: 0;
+    padding: 0 1em;
+    font-family: Verdana;
+    font-weight: bold;
+    text-shadow: 2px 2px #555;
+}
+
+.validate-id {
+    height: 2.77em;
+    margin: 0;
+    padding: 0 1em;
+    font-family: Verdana;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px #555;
+}
+
+.result {
+    visibility: hidden;
+}
+
+.btn-id-addon:hover,
+.btn-id-addon:active {
+}
+
+#id-format {
+    overflow: hidden;
+}
+
+#id-formula {
+    display: none;
+    overflow: hidden;
+}
+
+#id-generate {
+    display: none;
+    overflow: hidden;
+}
+
+#id-validate {
+    display: none;
+    overflow: hidden;
+}
+
+
+
+.nav > li > a.generate-btn:hover,
+.nav > li > a.generate-btn:focus {
+    color: #eee;
+    text-shadow: 1px 1px #444;
+    background-color: #8b4a0a;
+}
+
+.generate-id-number {
+    margin: 50px 30px;
+    padding: 10px 30px;
+    color: #eee;
+    text-shadow: 1px 1px #444;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #bf6505;
+    box-shadow: 2px 2px 0 #444;
+    border: none;
+    background-color: #8b4a0a;
+}
+
+.generated-id-number {
+    color: #eee;
+    text-shadow: 1px 1px #444;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+
+.input-id-number {
+    margin-top: 30px;
+    color: #444;
+    text-shadow: 1px 1px #444;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+
+.validate-id-number {
+    margin: 50px 30px;
+    padding: 10px 30px;
+    color: #eee;
+    text-shadow: 1px 1px #444;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    background-color: #5cb85c;
+    box-shadow: 2px 2px 0 #444;
+}
+
+.id-validation-result{
+    color: #eee;
+    text-shadow: 1px 1px #444;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        font-size: 1.8em;
+    }
+
+    .btn-id-addon {
+    }
+
+    .txt-validate-id {
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 2.1em;
+    }
+
+    .btn-id-addon {
+    }
+
+    .txt-validate-id {
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 2.4em;
+    }
+
+    .btn-id-addon {
+    }
+
+    .txt-validate-id {
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        /*font-size: 2em;*/
+    }
+
+    .btn-id-addon {
+    }
+
+    .txt-validate-id {
+    }
+}

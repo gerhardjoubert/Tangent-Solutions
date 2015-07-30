@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REST API Mini-Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/css/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row header-row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="Images/south-african-department-of-home-affairs.jpg" alt="south-african-department-of-home-affairs" />
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-10"><div class="heading-1">South African Identity Numbers</div></div>
+                <div class="col-xs-2">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav nav-justified">
+                    <li role="presentation"><a href="#" class="navbar-btn format-btn" disabled="disabled">ID Number Format</a></li>
+                    <li role="presentation"><a href="#" class="navbar-btn formula-btn">Check Digit Formula</a></li>
+                    <li role="presentation"><a href="#" class="navbar-btn generate-btn">Generate ID Number</a></li>
+                    <li role="presentation"><a href="#" class="navbar-btn validate-btn">Validate ID Number</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content-container">
+        <div id="id-format">
+            <div class="heading-2">ID Number Format</div>
+            <div class="validation-rules">
+                <ul>
+                    <li>{YYMMDD}{G}{SSS}{C}{A}{Z}</li>
+                    <li>YYMMDD : Date of birth.</li>
+                    <li>G: Gender. 0-4 Female; 5-9 Male.</li>
+                    <li>SSS: Sequence No. for DOB/G combination.</li>
+                    <li>C: Citizenship. 0 SA; 1 Other.</li>
+                    <li>A: Usually 8, or 9 [can be other values]</li>
+                    <li>Z: Control digit calculated in the following section:</li>
+                </ul>
+            </div>
+        </div>
+        <div id="id-formula">
+            <div class="heading-2">Formula for calculating the Check Digit</div>
+            <div class="validation-rules">
+                <ul>
+                    <li>Formula to calculate the check digit for a 13 digit identity number:</li>
+
+                    <li>
+                        According to the provisions of the Identification Amendment Act, 2000 (Act No. 28 of 2000,
+                        which was promulgated on 13 October 2000) all forms of identity documents other than the
+                        green bar-coded identity document are invalid. In accordance with the legislation,
+                        the control figure which is the 13th digit of all identity numbers which have 08 and 09 is
+                        calculated as follows using ID Number 800101 5009 087 as an example:
+                    </li>
+
+                    <li>Add all the digits in the odd positions(excluding last digit).</li>
+                    <li>8 + 0 + 0 + 5 + 0 + 0 = 13...................[1]</li>
+                    <li>Move the even positions into a field and multiply the number by 2.</li>
+                    <li>011098 x 2 = 22196</li>
+                    <li>Add the digits of the result in b).</li>
+                    <li>2 + 2 + 1 + 9 + 6 = 20.........................[2]</li>
+                    <li>Add the answer in [2] to the answer in [1].</li>
+                    <li>13 + 20 = 33</li>
+                    <li>Subtract the second digit (i.e. 3) from 10.  The number must tally with the last number in the ID Number.If the result is 2 digits, the last digit is used to compare against the last number in the ID Number.If the answer differs, the ID number is invalid.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="id-generate">
+            <div class="row">
+                <div id="sectionGenerate" class="col-xs-12 text-center"><button class="generate-id-number">Generate a valid ID Number</button></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 generated-id-number"></div>
+            </div>
+        </div>
+        <div id="id-validate">
+            <div class="row">
+                <div id="sectionValidate" class="col-xs-12 text-center"><input type="text" class="input-id-number" /></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center"><button class="validate-id-number">Validate ID Number</button></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 id-validation-result"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="Content/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Content/js/idnumbers.js"></script>
+</body>
+</html>
